@@ -1,0 +1,45 @@
+<ngx-spinner fullScreen="false">
+    <p style="font-size: 20px; color: white">Processing</p>
+</ngx-spinner>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card shadow-lg card-body">
+            <div class="form-group row">
+                <div class="col-sm-12"><h2>Update Employee</h2></div>
+                <div class="col-sm-6 mb-3">
+                    <p>Name</p>
+                    <input class="form-control" [(ngModel)]="employee.name" placeholder="Name..." #emp_name>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <p>Age</p>
+                    <input type="number" class="form-control" [(ngModel)]="employee.age" placeholder="Age..." #emp_age>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <p>Gender</p>
+                    <select class="form-control" #emp_gender>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <p>Email</p>
+                    <input class="form-control" [(ngModel)]="employee.email" placeholder="Email..." #emp_email>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <p>Address</p>
+                    <input class="form-control" [(ngModel)]="employee.address" placeholder="Address..." #emp_address>
+                </div>
+
+                <div class="col-sm-2 mb-3">
+                    <button class="btn btn-rounded btn-success text-white"
+                            (click)="updateEmployee(emp_name.value,emp_age.value,emp_gender.value, emp_email.value, emp_address.value )">
+                        <strong><i class="fa fa-plus-circle"></i> Update Employee</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
